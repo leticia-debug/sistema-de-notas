@@ -1,0 +1,172 @@
+/* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Principal */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #1a365d;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Formulários e Inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2d3748;
+    font-size: 14px;
+}
+
+input {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+/* Botões */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#btn-calcular {
+    background-color: #3182ce;
+    color: white;
+}
+
+#btn-calcular:hover {
+    background-color: #2b6cb0;
+}
+
+#btn-limpar {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+#btn-limpar:hover {
+    background-color: #cbd5e0;
+}
+
+/* Caixa de Resultado */
+.resultado-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 6px solid;
+    animation: fadeIn 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Classes dinâmicas de situação aplicadas pelo JavaScript */
+.aprovado {
+    background-color: #f0fff4;
+    border-color: #38a169;
+    color: #276749;
+}
+
+.recuperacao {
+    background-color: #fffaf0;
+    border-color: #dd6b20;
+    color: #9c4221;
+}
+
+.reprovado {
+    background-color: #fff5f5;
+    border-color: #e53e3e;
+    color: #9b2c2c;
+}
+
+.erro {
+    background-color: #fed7d7;
+    border-color: #e53e3e;
+    color: #9b2c2c;
+}
+
+.media-destaque {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade (Telas Menores / Celulares) */
+@media (max-width: 480px) {
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .btn-group {
+        flex-direction: column;
+    }
+}
